@@ -104,11 +104,11 @@ def main():
         if sample_search:
             display_df = display_df[display_df["sample"].str.contains(sample_search, case=False)]
 
-        st.dataframe(
-            display_df.style.format({"percentage": "{:.2f}%", "count": "{:,}", "total_count": "{:,}"}),
-            use_container_width=True,
-            height=440,
-        )
+        fmt_df = display_df.copy()
+        fmt_df["percentage"] = fmt_df["percentage"].map("{:.2f}%".format)
+        fmt_df["count"] = fmt_df["count"].map("{:,}".format)
+        fmt_df["total_count"] = fmt_df["total_count"].map("{:,}".format)
+        st.dataframe(fmt_df, use_container_width=True, height=440)
         st.caption(f"{len(display_df):,} rows shown")
 
         st.subheader("Population Average Frequencies (All Samples)")
