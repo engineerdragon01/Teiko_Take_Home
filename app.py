@@ -160,7 +160,7 @@ def main():
 
         def highlight_sig(row):
             if row["Significant (p<0.05)"]:
-                return ["background-color: #fff3cd"] * len(row)
+                return ["background-color: #e65100; color: #ffffff"] * len(row)
             return [""] * len(row)
 
         st.dataframe(
