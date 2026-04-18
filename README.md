@@ -137,7 +137,7 @@ Filtered to melanoma patients, miraclib treatment, PBMC samples, at baseline (da
 
 ## Dashboard
 
-**Live dashboard:** *(deploy to Streamlit Cloud and add URL here)*
+**Live dashboard:** https://teikotakehome.streamlit.app/
 
 The dashboard has three tabs:
 - **Data Overview** — Searchable/filterable frequency table for all samples
